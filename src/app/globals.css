@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+:root {
+  --background: hsl(0 0% 98%);
+  /* #F9F8F6 */
+  --foreground: hsl(120 10% 10%);
+  /* #1A1A1A */
+
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(120 10% 10%);
+
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(120 10% 10%);
+
+  --primary: hsl(127 28% 25%);
+  /* #2F5233 Forest Green */
+  --primary-foreground: hsl(0 0% 98%);
+
+  --secondary: hsl(120 33% 77%);
+  /* #B2D8B2 Fresh Light Green */
+  --secondary-foreground: hsl(127 28% 25%);
+
+  --muted: hsl(30 10% 96%);
+  --muted-foreground: hsl(120 5% 40%);
+
+  --accent: hsl(14 24% 29%);
+  /* #5D4037 Earth Brown */
+  --accent-foreground: hsl(0 0% 98%);
+
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(0 0% 98%);
+
+  --border: hsl(120 10% 90%);
+  --input: hsl(120 10% 90%);
+  --ring: hsl(127 28% 25%);
+
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(120 10% 10%);
+  --foreground: hsl(0 0% 98%);
+
+  --card: hsl(120 10% 12%);
+  --card-foreground: hsl(0 0% 98%);
+
+  --popover: hsl(120 10% 12%);
+  --popover-foreground: hsl(0 0% 98%);
+
+  --primary: hsl(127 28% 25%);
+  --primary-foreground: hsl(0 0% 98%);
+
+  --secondary: hsl(127 28% 15%);
+  --secondary-foreground: hsl(0 0% 98%);
+
+  --muted: hsl(120 10% 15%);
+  --muted-foreground: hsl(120 5% 60%);
+
+  --accent: hsl(14 24% 29%);
+  --accent-foreground: hsl(0 0% 98%);
+
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(0 0% 98%);
+
+  --border: hsl(120 10% 20%);
+  --input: hsl(120 10% 20%);
+  --ring: hsl(127 28% 25%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
